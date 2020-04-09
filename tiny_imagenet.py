@@ -6,7 +6,6 @@ from torchvision.datasets import ImageFolder
 from torchvision.datasets import VisionDataset
 from torchvision.datasets.folder import default_loader
 from torchvision.datasets.folder import default_loader
-from torchvision.datasets.utils import check_integrity, extract_archive
 from torchvision.datasets.utils import extract_archive, check_integrity, download_url, verify_str_arg
 
 
