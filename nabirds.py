@@ -7,6 +7,20 @@ from torchvision.datasets.utils import check_integrity, extract_archive
 
 
 class NABirds(VisionDataset):
+    """`NABirds <https://dl.allaboutbirds.org/nabirds>`_ Dataset.
+
+        Args:
+            root (string): Root directory of the dataset.
+            train (bool, optional): If True, creates dataset from training set, otherwise
+               creates from test set.
+            transform (callable, optional): A function/transform that  takes in an PIL image
+               and returns a transformed version. E.g, ``transforms.RandomCrop``
+            target_transform (callable, optional): A function/transform that takes in the
+               target and transforms it.
+            download (bool, optional): If true, downloads the dataset from the internet and
+               puts it in root directory. If dataset is already downloaded, it is not
+               downloaded again.
+    """
     base_folder = 'nabirds/images'
     filename = 'nabirds.tar.gz'
     md5 = 'df21a9e4db349a14e2b08adfd45873bd'

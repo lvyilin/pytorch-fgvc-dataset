@@ -7,6 +7,20 @@ from torchvision.datasets.utils import download_url, list_dir
 
 
 class Dogs(VisionDataset):
+    """`Stanford Dogs <http://vision.stanford.edu/aditya86/ImageNetDogs/>`_ Dataset.
+
+        Args:
+            root (string): Root directory of the dataset.
+            train (bool, optional): If True, creates dataset from training set, otherwise
+               creates from test set.
+            transform (callable, optional): A function/transform that  takes in an PIL image
+               and returns a transformed version. E.g, ``transforms.RandomCrop``
+            target_transform (callable, optional): A function/transform that takes in the
+               target and transforms it.
+            download (bool, optional): If true, downloads the dataset from the internet and
+               puts it in root directory. If dataset is already downloaded, it is not
+               downloaded again.
+    """
     download_url_prefix = 'http://vision.stanford.edu/aditya86/ImageNetDogs'
 
     def __init__(self, root, train=True, transform=None, target_transform=None, download=False):

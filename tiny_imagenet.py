@@ -10,7 +10,19 @@ from torchvision.datasets.utils import extract_archive, check_integrity, downloa
 
 
 class TinyImageNet(VisionDataset):
-    """`tiny-imageNet <http://cs231n.stanford.edu/tiny-imagenet-200.zip>`_ Dataset."""
+    """`tiny-imageNet <http://cs231n.stanford.edu/tiny-imagenet-200.zip>`_ Dataset.
+
+        Args:
+            root (string): Root directory of the dataset.
+            split (string, optional): The dataset split, supports ``train``, or ``val``.
+            transform (callable, optional): A function/transform that  takes in an PIL image
+               and returns a transformed version. E.g, ``transforms.RandomCrop``
+            target_transform (callable, optional): A function/transform that takes in the
+               target and transforms it.
+            download (bool, optional): If true, downloads the dataset from the internet and
+               puts it in root directory. If dataset is already downloaded, it is not
+               downloaded again.
+    """
     base_folder = 'tiny-imagenet-200/'
     url = 'http://cs231n.stanford.edu/tiny-imagenet-200.zip'
     filename = 'tiny-imagenet-200.zip'

@@ -7,7 +7,19 @@ from torchvision.datasets.utils import download_url, verify_str_arg
 
 
 class INat2017(VisionDataset):
-    """`iNaturalist 2017 <https://github.com/visipedia/inat_comp/blob/master/2017/README.md>` Dataset."""
+    """`iNaturalist 2017 <https://github.com/visipedia/inat_comp/blob/master/2017/README.md>`_ Dataset.
+
+        Args:
+            root (string): Root directory of the dataset.
+            split (string, optional): The dataset split, supports ``train``, or ``val``.
+            transform (callable, optional): A function/transform that  takes in an PIL image
+               and returns a transformed version. E.g, ``transforms.RandomCrop``
+            target_transform (callable, optional): A function/transform that takes in the
+               target and transforms it.
+            download (bool, optional): If true, downloads the dataset from the internet and
+               puts it in root directory. If dataset is already downloaded, it is not
+               downloaded again.
+    """
     base_folder = 'train_val_images/'
     file_list = {
         'imgs': ('https://storage.googleapis.com/asia_inat_data/train_val/train_val_images.tar.gz',
