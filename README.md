@@ -1,7 +1,7 @@
 # PyTorch FGVC Dataset
 
 This repo contains some unofficial PyTorch dataset APIs(mainly for Fine-Grained Visual Categorization task), 
-which support automatically download(except large-scale datasets), extract the archives, and prepare the data.
+which support automatically download (except large-scale datasets), extract the archives, and prepare the data.
 
 ## Supported Datasets
 - [x] CUB-200-2011
@@ -11,6 +11,9 @@ which support automatically download(except large-scale datasets), extract the a
 - [x] NABirds
 - [x] Tiny ImageNet
 - [x] iNaturalist 2017
+- [ ] Oxford 102 Flowers
+- [ ] Oxford-IIIT Pets
+- [ ] Food-101
 
 ## Usage
 The code was tested on 

@@ -1,8 +1,9 @@
 import os
+
 import pandas as pd
 from torchvision.datasets import VisionDataset
 from torchvision.datasets.folder import default_loader
-from torchvision.datasets.utils import download_url
+from torchvision.datasets.utils import download_file_from_google_drive
 
 
 class Cub2011(VisionDataset):
@@ -21,7 +22,8 @@ class Cub2011(VisionDataset):
                downloaded again.
     """
     base_folder = 'CUB_200_2011/images'
-    url = 'http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz'
+    # url = 'http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz'
+    file_id = '1hbzc_P1FuxMkcabkgn9ZKinBwW683j45'
     filename = 'CUB_200_2011.tgz'
     tgz_md5 = '97eceeb196236b17998738112f37df78'
 
@@ -75,7 +77,7 @@ class Cub2011(VisionDataset):
             print('Files already downloaded and verified')
             return
 
-        download_url(self.url, self.root, self.filename, self.tgz_md5)
+        download_file_from_google_drive(self.file_id, self.root, self.filename, self.tgz_md5)
 
         with tarfile.open(os.path.join(self.root, self.filename), "r:gz") as tar:
             tar.extractall(path=self.root)
